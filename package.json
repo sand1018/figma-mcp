@@ -1,0 +1,26 @@
+{
+  "name": "figma-context-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server: Figma design context → semantic tree + screenshot",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "scripts": {
+    "start": "node dist/index.cjs",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsup",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
